@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<!--  pip install django-bootsrap4 -->
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="container">
+  <h1>Sign Up</h1>
+  <form method="POST" >
+    {% csrf_token %}
+    {% bootstrap_form form %} <!--yazı tipi vb özellikler için bootstrap kullandık -->
+
+    <input type="submit" class="btn btn-default" value="Sign Up">
+
+  </form>
+</div>
+{% endblock %}
